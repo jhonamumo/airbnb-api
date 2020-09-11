@@ -6,8 +6,10 @@ const port= 3001;
 
 // Routes
 const experiencesRoutes = require('./routes/experiences');
+const bookingRoutes = require('./routes/booking');
 
 app.use('/experiences', experiencesRoutes);
+app.use('/booking', bookingRoutes);
 /*
     - localhost:3001/experiences/all
     - localhost:3001/experiences/top5
