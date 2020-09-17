@@ -1,0 +1,4 @@
+nombre: nombre 
+correo: correo@correo.com 
+fecha: 01/01/2000 
+telefono: 31738491091

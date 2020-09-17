@@ -6,7 +6,7 @@ const all = (req, res) => {
 }
 
 const reserve = (req, res) => {
-    const response = putReserveBooking();
+    const response = putReserveBooking(req.body);
     res.send(response);
 }
 
