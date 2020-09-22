@@ -1,13 +1,18 @@
 const { findAllBooking, putReserveBooking } = require('./../businessLogic/bookingBL');
 
 const all = (req, res) => {
-    const response = findAllBooking();
-    res.send(response);
+    //const response = findAllBooking();
+    //res.send(response);
+    res.send('Ok all');
 }
 
-const reserve = (req, res) => {
-    const response = putReserveBooking(req.body);
-    res.send(response);
+const reserve = async (req, res) => {
+    try {
+        const response = await putReserveBooking(req.body);
+        res.json(response);
+    } catch (error) {
+        res.status(404).send(error);
+    }
 }
 
 module.exports = {
