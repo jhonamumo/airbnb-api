@@ -1,26 +1,16 @@
-const { Date } = require('mongoose');
 const mongoose = require('mongoose');
+const { mongo } = require('mongoose');
+const moongose = require('mongoose');
 const { Schema } = mongoose;
 
 const BookingSchema = new Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    phone: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true
-    },
-    bookingDate: {
-        type: Date,
-        required: true
-    }
+    name: String,
+    email: String,
+    phone: String,
+    booking_date: Date,
+    experience_id: String
 });
 
-const BookingModel = mongoose.model('booking', BookingSchema);
+const BookingModel = moongose.model('bookings', BookingSchema)
 
-module.exports = BookingModel;
+module.exports = BookingModel

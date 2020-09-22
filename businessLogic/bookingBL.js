@@ -3,12 +3,13 @@ const BookingModel = require('./../models/bookingModel');
 const findAllBooking = () => {
 }
 
-const putReserveBooking = async ({name, phone, email, bookingDate}) => {
+const putReserveBooking = async ({name, phone, email, booking_date, experience_id}) => {
     const bookingData = {
         name,
         phone,
         email,
-        bookingDate
+        booking_date,
+        experience_id
     }
 
     try {
